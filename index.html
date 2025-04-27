@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta name="viewpoint"content="width=device-width,initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6952b55733.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Transforming ideas into reality</p>
+            <h1>Hi, I'm <span>Sedzani</span><br> Tendani | Aspiring Tech Professional</h1>
+        </div>
+    </div>
+</div>
+<!-----------about---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm a second year Computer Science student at the University of Venda.I'm passionate about innovative solutions and exploring the endless possibilities of technology.I've developed skills in Java, C++, and SQL, and i'm currently learning about machine learning and artificial intelligence.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills & tools')">Skills & Tools</p>
+                    <p class="tab-links" onclick="opentab('academicbackground')">Academic Background</p>
+                    <p class="tab-links" onclick="opentab('academicgoals')">Academic Goals</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills & tools">
+                    <ul>
+                        <li><span>Programming Languages</span><br>Java,C++,SQL,HTML,CSS,Python</li>
+                        <li><span>Development Tools</span><br>VS Code,Code::Blocks,Netbeans</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="academicbackground">
+                    <ul>
+                        <li>When i started my journey in Computer Science,i knew nothing, no code, no concepts, no clue.But as i dove headfirst into the world of programming,i discovered a realm of endless possibilities.I've transformed my initial uncertainty into a passion for programming.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="academicgoals">
+                    <ul>
+                        <li>My goal is to continue learning and growing in the field of Computer Science,i'm excited to apply my skills to real world problems and making a positive impact through my work.As Bill Gates once said "The future belongs to those who believe in the beauty of their dreams." </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------projects------------ -->
+ <div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div>
+                <i class="fa-brands fa-java"></i>
+                <h2>Budget Planner</h2>
+                <p>A budget planning application built using java that allows users to track their income and expenses,providing a simple and effective way to manage finance.</p>
+        
+            </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Hospital Database</h2>
+                    <p>A hospital database management system built using SQL that allows for efficient storage and retrieval of patient information, medical records, and hospital resources.</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>8 Puzzle Solver</h2>
+                    <p>An 8 Puzzle solver application built using Python that uses algorithms to find the shortest path to solve the puzzle,providing a fun and challenging problem solving experience.</p>
+                    
+                </div>
+        </div>
+    </div>
+ </div>
+
+<!-----------------contact------------->
+<div id="contact">
+<div class="container">
+    <div class="row"> 
+     <div class ="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-envelope"></i> sedzanitendani0@gmail.com</p>
+        <P><i class="fa-solid fa-phone"></i>0713857451</P>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sedzani-tendani-130821306?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/24000722"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/tendani_sedzani?igsh=dzcyYnhyY2VpaHho"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/16MEzS3VDn/"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+     </div>
+     
+     </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>@2025 Tendani Sedzani.All right reserved</p>
+</div>
+</div>
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+<script>
+     
+     var sidemenu=document.getElementById("sidemenu");
+
+     function openmenu(){
+        sidemenu.style.right= "0";
+     }
+     function closemenu(){
+        sidemenu.style.right= "-200px";
+     }
+
+</script>
+
+</body>
+</html>
