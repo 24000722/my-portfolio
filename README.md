@@ -13,8 +13,8 @@ It is fully responsive and works across different devices, including mobile phon
 - Smooth navigation menu
 
 ## Technologies Used
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 - Font Awesome (for icons)
 
